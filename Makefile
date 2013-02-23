@@ -155,11 +155,10 @@ orig:
 
 	@echo downloading Timeline media
 
-	@wget -O orig/TLineRules.pdf http://web.cheapass.com/sites/default/files/TLineRules.pdf
-	@wget -O orig/TLineCards.pdf http://web.cheapass.com/sites/default/files/TLineCards.pdf
-	@wget -O orig/TLineBacks.pdf http://web.cheapass.com/sites/default/files/TLCardBacks.pdf
-
-	@wget -O orig/TLineIcon.jpg     http://web.cheapass.com/sites/default/files/TimeLineBug.jpg
+	@wget -O orig/TLineRules.pdf http://www.cheapass.com/sites/default/files/TLineRules.pdf
+	@wget -O orig/TLineCards.pdf http://www.cheapass.com/sites/default/files/TLineCards.pdf
+	@wget -O orig/TLineBacks.pdf http://www.cheapass.com/sites/default/files/TLCardBacks.pdf
+	@wget -O orig/TLineIcon.jpg  http://www.cheapass.com/sites/default/files/TimeLineBug.jpg
 
 #-------------------------------------------------------------------------------
 help:
