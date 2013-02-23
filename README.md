@@ -20,9 +20,15 @@ To download various web pre-req's, you'll need to run the following commands
 The artwork in the application comes from Cheapass.  You will need to run
 the following command to download and convert that artwork.
 
-
     make orig cards icons
 
 You will also need to have 
 [ImageMagick](http://www.imagemagick.org/)
 installed to convert the icons.
+
+Finally, use
+
+    make build
+
+to do the final build.  The result is the contents of the `web` directory,
+specifcally, the `index.html` file.

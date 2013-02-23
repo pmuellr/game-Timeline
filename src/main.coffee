@@ -1,8 +1,14 @@
 # Licensed under the Tumbolia Public License. See footer for details.
 
-orig
-tmp
-node_modules
+require "underscore"
+require "backbone"
+
+require "./Board"
+require "./Card"
+require "./Cards"
+require "./Game"
+require "./Stone"
+
 
 #-------------------------------------------------------------------------------
 # Copyright (c) 2013 Patrick Mueller

@@ -5,6 +5,27 @@
 all: help
 
 #-------------------------------------------------------------------------------
+watch: 
+	@node_modules/.bin/wr "make build" \
+		src \
+		web/index.html \
+		web/main.css
+
+#-------------------------------------------------------------------------------
+build: 
+	@echo "running build"
+
+	@mkdir -p tmp
+	@-rm      tmp/*
+
+	@node_modules/.bin/coffee --bare --compile --output tmp src/*
+
+	@node_modules/.bin/browserify \
+		--outfile web/modules.js \
+		--insert-globals \
+		tmp/main.js
+
+#-------------------------------------------------------------------------------
 vendor: \
 	vendor-init \
 	vendor-bootstrap \
@@ -163,10 +184,14 @@ orig:
 #-------------------------------------------------------------------------------
 help:
 	@echo "targets:"
+	@echo "   build  - run a build"
+	@echo "   watch  - watch for source changes, then run a build"
 	@echo "   vendor - download 3rd party files"
 	@echo "   orig   - download the original media"
 	@echo "   cards  - generate card images from the original media"
 	@echo "   icons  - generate icons from the original media" 
+
+	@echo "You'll need to run orig before cards and before icons."
 
 #-------------------------------------------------------------------------------
 # Copyright (c) 2013 Patrick Mueller

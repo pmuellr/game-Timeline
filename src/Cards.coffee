@@ -1,8 +1,8 @@
 # Licensed under the Tumbolia Public License. See footer for details.
 
-orig
-tmp
-node_modules
+module.exports = class Cards
+
+    
 
 #-------------------------------------------------------------------------------
 # Copyright (c) 2013 Patrick Mueller
